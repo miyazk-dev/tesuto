@@ -1,0 +1,4 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'; import { site } from '../config/site';
+---
+<BaseLayout title="お問い合わせ"><section class="container page-hero"><div class="eyebrow">Contact</div><h1 class="page-title">お問い合わせ</h1><p>Webアプリ、Webサイト制作、業務効率化などのご相談を受け付けています。内容を確認し、可能な範囲で返信します。</p></section><section class="container section prose"><h2>ご相談いただける内容</h2><p>Webアプリ開発、Webサイト制作、業務効率化・自動化、既存システムの改善、自社サービスの企画など。</p><h2>お問い合わせフォーム</h2>{site.contactFormUrl ? <p><a class="button" href={site.contactFormUrl} target="_blank" rel="noopener noreferrer">Googleフォームを開く（外部サイト） ↗</a></p> : <p class="notice">お問い合わせフォームは現在準備中です。</p>}<p>フォームを公開した後も、返信は内容を確認のうえ手動で行います。返信までお時間をいただく場合があります。</p><p>個人情報の取り扱いは<a class="text-link" href="/privacy">プライバシーポリシー</a>をご確認ください。</p></section></BaseLayout>

@@ -1,0 +1,4 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'; import { prices } from '../data/content';
+---
+<BaseLayout title="料金案内"><section class="container page-hero"><div class="eyebrow">Pricing</div><h1 class="page-title">料金の目安</h1><p>以下は検討段階の仮価格です。ご相談内容に応じて、正式なお見積もりをご案内します。</p></section><section class="container section"><table class="price-list"><tbody>{prices.map(([name,price])=><tr><td>{name}</td><td>{price}</td></tr>)}</tbody></table><p class="notice">表示価格は仮の参考価格です。税込・税別、支払い方法、契約条件は未確定です。正式なご依頼前に個別にご案内します。</p><a class="button" href="/contact">料金について相談する</a></section></BaseLayout>

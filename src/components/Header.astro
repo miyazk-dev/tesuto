@@ -1,0 +1,10 @@
+<header class="site-header"><div class="container header-inner">
+  <a class="brand" href="/" aria-label="Nexora ホーム"><img src="/icons/nexora-mark.svg" width="34" height="34" alt=""/><span>Nexora</span></a>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="メニューを開く"><span></span><span></span></button>
+  <nav id="main-nav" aria-label="メインナビゲーション"><a href="/services">サービス</a><a href="/products">プロダクト</a><a href="/works">制作実績</a><a href="/pricing">料金</a><a class="nav-cta" href="/contact">お問い合わせ</a></nav>
+</div></header>
+<script>
+const button = document.querySelector<HTMLButtonElement>('.menu-toggle');
+const nav = document.querySelector<HTMLElement>('#main-nav');
+button?.addEventListener('click', () => { const open = button.getAttribute('aria-expanded') !== 'true'; button.setAttribute('aria-expanded', String(open)); button.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く'); nav?.classList.toggle('is-open', open); });
+</script>
